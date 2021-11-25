@@ -6,6 +6,7 @@ public class App {
 		// 행맨 게임 시작
 		Hangman  game = new Hangman();
 		game.run();
+		game.close();
 	}
 
 }

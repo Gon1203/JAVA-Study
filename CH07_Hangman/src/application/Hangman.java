@@ -27,10 +27,21 @@ public class Hangman {
 		// RandomWord 객체에 전장 ( addGuess(문자)메소드를 만들자 )
 		System.out.print("한 문자 입력 : ");
 		String guess = sc.nextLine();
-		r.addGuess(guess.charAt(0));	// 첫번째 문자
+		r.addGuess(guess.charAt(0));	// 첫번째 문자 
 	}
 
 	private void checkuserInput() {
-		System.out.println("화면에 단어 표시");
+		// 유저가 단어를 다 맞췄는지 체크해서 게임을 종료
+		// 게임 종료 확인을 하는 메소드 isCompleted 를 RandomWord 클래스에 만들기
+		if(r.isCompleted() == true) {
+			System.out.println("정답입니다.");
+			System.out.println("정답은 " + r.toString());
+			running = false;
+		}
+	}
+
+	/** 스캐너를 닫는 메소드 */
+	public void close() {
+		sc.close();
 	}
 }
