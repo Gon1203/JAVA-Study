@@ -6,8 +6,12 @@ public class Ex2 {
 		// TODO Auto-generated method stub
 		double gasoline = 8.86;
 		double distance = 182.736;
-		double efficiency = distance / gasoline;
-		System.out.printf("%.2f km/l",efficiency);
+		double result = calEffiency(gasoline, distance);
+		System.out.printf("%.2f km/l",result);
+	}
+	
+	public static double calEffiency(double fuel, double distance) {
+		return distance / fuel;
 	}
 
 }
