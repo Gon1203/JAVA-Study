@@ -15,9 +15,9 @@ public class Game {
 	Scanner sc = new Scanner(System.in);
 
 	public void run() {
-		System.out.println("게임 시작 ....");
 		int wins = 0;
-		for (int i = 0; i < 3; i++) {
+		for (int i = 1; i < 4; i++) {
+			System.out.println(i+ "번째 게임 시작 ....");
 
 			System.out.print("가위(0), 바위(1), 보(2)를 숫자로 선택 >>");
 			GameObject ob1 = objects[sc.nextInt()];
