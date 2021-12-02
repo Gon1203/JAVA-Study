@@ -21,7 +21,6 @@ import javax.swing.JToolBar;
 //	}
 //}
 
-
 public class Toolbar extends JToolBar {
 	private static final long serialVersionUID = 1L;
 
@@ -34,7 +33,7 @@ public class Toolbar extends JToolBar {
 //				mainPanel.setBackground(Color.red);
 //			}
 //		});
-		redButton.addActionListener(e -> mainPanel.setBackground(Color.red)); 	// 람다식 표현 (매개변수) -> {함수 바디}
+		redButton.addActionListener(e -> mainPanel.setBackground(Color.red)); // 람다식 표현 : (매개변수) -> {함수 바디}
 //		blueButton.addActionListener(new ActionListener() {
 //			public void actionPerformed(ActionEvent e) {
 //				mainPanel.setBackground(Color.blue);
