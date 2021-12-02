@@ -20,13 +20,18 @@ public class App {
 
 	private void run() {
 //		System.out.println(name);
-		class Printer implements Runnable {
+//		class Printer implements Runnable {
+//			public void run() {
+//				System.out.println(name);
+//			}
+//		}
+//		new Printer().print();
+		ScheduledExecutorService service = Executors.newScheduledThreadPool(1);
+		service.scheduleAtFixedRate(new Runnable() {
+
 			public void run() {
 				System.out.println(name);
 			}
-		}
-//		new Printer().print();
-		ScheduledExecutorService service = Executors.newScheduledThreadPool(1);
-		service.scheduleAtFixedRate(new Printer(), 0, 1l, TimeUnit.SECONDS);
+		}, 0, 1l, TimeUnit.SECONDS);
 	}
 }
