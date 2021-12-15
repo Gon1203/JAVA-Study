@@ -1,23 +1,23 @@
 package inheritance_interface;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int count = 0;
 		int n = sc.nextInt();
-		int x = n/10 + n%10;
-		if(n < 10){
-			n = 
+		int[] list = new int[n];
+		for(int i = 0; i < n; i++) {
+			list[i] = sc.nextInt();
 		}
-		while(n) {
-			
-			count++;
-		}
-		System.out.println(count);
+		Arrays.sort(list);
+		System.out.println(list[n-1]);
+		System.out.println(list.length);
+		
 		sc.close();
 	}
 
 }
+
